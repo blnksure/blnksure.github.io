@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/detect2.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body>
+    <div class="pri_topanav">
+        <!-- 网站logo -->
+        <div class="logo">
+            <a href="#">
+                <h1 class="pri_logo"></h1>
+                <h3>Privacy-Guard Online</h3>
+            </a>
+        </div>
+        <!-- 主导航 -->
+        <div class="pri_navs">
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./detect.html">检测</a></li>
+                <li><a href="./help.html">帮助</a></li>
+                <li><a href="./personalcenter.html">个人中心</a></li>
+            </ul>
+        </div>
+        <!-- 用户头像 -->
+        <div class="usrrpic">
+            <div class="u-img"></div>
+        </div>
+    </div>
+
+    <div class="superfluous">
+
+        <div class="after_detect"><strong>软件信息文本检测</strong>
+            <span class="content">检测内容:</span>
+            <div class="detect_content">
+                <div class="command">
+                    <input type="checkbox" name="a"><span>简介合规性</span><br><br>
+                    <input type="checkbox" name="a"><span>标题合规性</span><br><br>
+                    <input type="checkbox" name="a"><span>开发者信息</span><br><br>
+                    <input type="checkbox" name="a"><span>动作和目的</span><br><br>
+                    <input type="checkbox" name="a"><span>处理技术</span><br><br>
+                    <input type="checkbox" name="a"><span>数据分享</span><br><br>
+                    <input type="checkbox" name="a"><span>数据安全</span><br><br>
+                    <input type="checkbox" name="a"><span>用户权利</span><br><br>
+                    <input type="checkbox" name="a"><span>数据保障</span><br><br>
+                    <input type="checkbox" name="a"><span>国际数据传输</span><br><br>
+                    <input type="checkbox" name="a"><span>隐私策略的变化</span><br><br>
+                    <input type="checkbox" name="a"><span>法律依据</span><br><br>
+                    <input type="checkbox" name="a"><span>广告使用</span><br><br>
+                    <input type="checkbox" name="a"><span>儿童保护</span><br><br>
+                    <input type="checkbox" name="a"><span>链接有效性</span><br><br>
+                </div>
+                <input type="checkbox" class="all" onclick="selectAll();"><span>全部</span><br>
+                <button type="submit" class="sub">提交检测</button>
+                <a href="./detect.html"><button type="reset">返回</button></a>
+            </div>
+        </div>
+        <div class="deimg"></div>
+    </div>
+
+    <div class="result_page" style="display: none;">
+        <div class="result_box"><strong>检测结果</strong>
+            <spa>检测内容:</spa>
+            <spa>检测结果:</spa>
+            <div class="box_content">
+                <div>
+                    <span>软件的名称</span><input type="text">
+                    <span>软件的类别</span><input type="text" class="doc">
+                </div>
+                <div>
+                    <span>软件的标题</span><input type="text">
+                    <span>软件的简介</span><input type="text">
+                </div>
+
+
+
+
+            </div>
+            <div class="box_result">
+                <span>• 简介合规性 <b>X</b></span><br><br>
+                <span>• 标题合规性 <b>X</b></span><br><br>
+                <span>• 开发者信息 <b>X</b></span><br><br>
+                <span>• 动作和目的 <b>X</b></span><br><br>
+                <span>• 处理技术 <b>X</b></span><br>
+                <span>• 数据分享 <b>X</b></span><br><br>
+                <span>• 数据安全 <b>X</b></span><br><br>
+                <span>• 用户权利 <b>X</b></span><br><br>
+                <span>• 数据保障 <b>X</b></span><br><br>
+                <span>• 国际数据传输 <b>X</b></span><br>
+                <span>• 隐私策略的变化 <b>X</b></span><br><br>
+                <span>• 法律依据 <b>X</b></span><br><br>
+                <span>• 广告使用 <b>X</b></span><br><br>
+                <span>• 儿童保护 <b>X</b></span><br><br>
+                <span>• 链接有效性 <b>X</b></span>
+            </div>
+        </div>
+        <div class="deimg"></div>
+    </div>
+
+    <script src="./Js/detect2.js"></script>
+</body>
+
+</html>

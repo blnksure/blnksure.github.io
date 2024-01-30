@@ -1,0 +1,221 @@
+.pri_topanav {
+    display: flex;
+    justify-content: space-around;
+    height: 54px;
+    background-color: #bde3fc;
+    border-bottom: 1px #707375 solid;
+}
+
+.pri_topanav .logo a {
+    display: flex;
+    justify-content: space-between;
+    line-height: 54px;
+}
+
+.pri_topanav .pri_logo {
+    width: 48px;
+    height: 50px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    margin-left: 13px;
+}
+
+.pri_topanav .pri_navs ul {
+    display: flex;
+    justify-content: space-between;
+    line-height: 54px;
+}
+
+.pri_topanav .pri_navs ul li {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.pri_topanav .pri_navs ul li:nth-child(4) a {
+    border-bottom: solid 1px #004664;
+    color: #004664;
+}
+
+.pri_topanav .pri_navs ul li a:hover {
+    color: #004664;
+}
+
+.pri_topanav .usrrpic {
+    line-height: 40px;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+
+.pri_topanav .usrrpic .u-img {
+    width: 48px;
+    height: 50px;
+    margin-left: 115px;
+    margin-right: 10px;
+    background-image: url(../images/user.png);
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+.left p {
+    height: 46px;
+    border: 2px solid #234854;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    line-height: 46px;
+
+}
+
+.left {
+    width: 200px;
+    height: 100%;
+    float: left;
+    background-color: #e5eeff;
+    border-right: 1px solid;
+}
+
+.right {
+    width: 895px;
+    height: 100%;
+    float: right;
+    background-color: #f9f9f9;
+    border-left: 1px solid;
+}
+
+.center {
+    height: 100%;
+    margin: 0 200px;
+    background-color: #f9f9f9;
+}
+
+.search {
+    width: 305px;
+    height: 100px;
+    position: relative;
+}
+
+form.search input[type=text] {
+    width: 270px;
+    height: 43px;
+    border: 1px solid grey;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+
+}
+
+.search span {
+    position: absolute;
+    top: 35px;
+    left: 45px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/u346.png);
+    background-size: cover;
+    cursor: pointer;
+
+}
+
+.search input {
+    padding-left: 55px;
+}
+
+
+.second {
+    background-color: #e5eeff;
+    height: 100%;
+    margin-top: 0px;
+    display: none;
+}
+
+.submitbox {
+    background-color: #c6eafc;
+    width: 700px;
+    height: 400px;
+    margin: 0px auto;
+    padding-top: 20px;
+    position: relative;
+    top: 50px;
+    border: #798a8a solid 1px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.submitbox strong {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    border-bottom: solid #798a8a 1px;
+    padding-bottom: 10px;
+}
+
+.line_first {
+    margin: 40px auto 20px;
+}
+
+.line_second {
+    margin: 20px auto 20px;
+}
+
+.line_third {
+    margin: 20px auto 40px;
+}
+
+.information span {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+form.information button:nth-of-type(1) {
+    background-color: rgb(98, 210, 98);
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-right: 150px;
+    border: 1px solid #798a8a;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+form.information button:nth-of-type(2) {
+    background-color: #d7d7d7;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: 1px solid #798a8a;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+form.information input {
+    width: 130px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 60px;
+    border: solid #798a8a 1px;
+
+}
+
+.data {
+    margin: 40px 40px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.detail {
+    margin-left: 40px;
+}
+
+.time {
+    margin: 0 15px;
+    font-size: 15px;
+}
+
+.ago {
+    font-size: 18px;
+    margin-left: 20px;
+}

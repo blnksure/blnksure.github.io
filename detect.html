@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>层层守护,隐私无忧!</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/deetect.css">
+</head>
+
+<body>
+  <div class="pri_topanav">
+    <!-- 网站logo -->
+    <div class="logo">
+      <a href="#">
+        <h1 class="pri_logo"></h1>
+        <h3>Privacy-Guard Online</h3>
+      </a>
+    </div>
+    <!-- 主导航 -->
+    <div class="pri_navs">
+      <ul>
+        <li><a href="./index.html">首页</a></li>
+        <li><a href="./detect.html">检测</a></li>
+        <li><a href="./help.html">帮助</a></li>
+        <li><a href="./personalcenter.html">个人中心</a></li>
+      </ul>
+    </div>
+    <!-- 用户头像 -->
+    <div class="usrrpic">
+      <div class="u-img"></div>
+    </div>
+  </div>
+
+  <!-- 主要内容 -->
+  <div class="debanner">
+    <div class="wrapper">
+      <div class="detecting">
+        <!-- 选择方式 -->
+        <div class="way">
+          <span>提交方式:</span>
+          <label for="up"><input type="radio" id="up" name="tab" data-id=".up" checked>上传文档</label>
+          <label for="text"><input type="radio" id="text" name="tab" data-id=".text">文本粘贴</label>
+        </div>
+        <!-- 上传文件 -->
+        <div class="upload">
+          <label for="up" class="up active">
+            <input type="file" id="up">
+            <div class="content">
+              <img src="./images/u577.jpg" alt="">
+              <div>点击或拖拽文件到此处上传</div>
+              <span>文件支持格式：word文件(doc，docx)，文本文件(txt)</span>
+            </div>
+          </label>
+          <div class="text">
+            <textarea style="resize: none; border: none; outline: none;"></textarea>
+            <span>将需要检测的内容复制到此处（点击）</span>
+          </div>
+        </div>
+
+        <!-- 提交检测 -->
+        <div>
+          <a href="./detect2.html" class="submitf"><button class="submit">提交检测</button></a>
+          <a href="./index.html"><button class="return">返回</button></a>
+
+        </div>
+      </div>
+      <div class="deimg"></div>
+    </div>
+  </div>
+  <script src="./Js/detect.js"></script>
+</body>
+
+</html>

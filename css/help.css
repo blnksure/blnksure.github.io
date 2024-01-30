@@ -1,0 +1,81 @@
+.pri_topanav {
+  display: flex;
+  justify-content: space-around;
+  height: 54px;
+  background-color: #bde3fc;
+  border-bottom: 1px #707375 solid;
+  margin-bottom: 30px;
+}
+
+.pri_topanav .logo a {
+  display: flex;
+  justify-content: space-between;
+  line-height: 54px;
+}
+
+.pri_topanav .pri_logo {
+  width: 48px;
+  height: 50px;
+  background-image: url(../images/logo.png);
+  background-size: contain;
+  margin-left: 13px;
+}
+
+.pri_topanav .pri_navs ul {
+  display: flex;
+  justify-content: space-between;
+  line-height: 54px;
+}
+
+.pri_topanav .pri_navs ul li {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.pri_topanav .pri_navs ul li:nth-child(3) a {
+  border-bottom: solid 1px #004664;
+  color: #004664;
+}
+
+.pri_topanav .pri_navs ul li a:hover {
+  color: #004664;
+}
+
+.pri_topanav .usrrpic {
+  line-height: 40px;
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+}
+
+.pri_topanav .usrrpic .u-img {
+  width: 48px;
+  height: 50px;
+  margin-left: 115px;
+  margin-right: 10px;
+  background-image: url(../images/user.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.hebanner .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hebanner .wrapper img {
+  width: 520px;
+  height: 380px;
+  margin-top: 30px;
+}
+
+.hebanner .wrapper ul li {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.hebanner .wrapper ul li span {
+  font-size: 14px;
+  font-weight: normal;
+}
