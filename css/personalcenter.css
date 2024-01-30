@@ -212,10 +212,21 @@ form.information input {
 
 .time {
     margin: 0 15px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .ago {
-    font-size: 18px;
-    margin-left: 20px;
+    font-size: 20px;
+    margin-left: 80px;
+    margin-bottom: 25px;
+}
+
+.detail button {
+    margin-left: 150px;
+    width: 95px;
+    height: 30px;
+    background-color: #F26934;
+    cursor: pointer;
+    color: whitesmoke;
+    border-radius: 5px;
 }

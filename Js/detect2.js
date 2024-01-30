@@ -19,6 +19,9 @@ function selectAll() {
 }
 
 let lis = []
+let arr = JSON.parse(localStorage.getItem('keypg')) || []
+var timeddd = new Date()
+
 const bs = document.querySelectorAll('b')
 const box1 = document.querySelector('.superfluous')
 const box2 = document.querySelector('.result_page')
@@ -48,4 +51,9 @@ sub.addEventListener('click', function () {
     }
   }
 
+  arr.push({ time: timeddd.toLocaleTimeString() })
+  localStorage.setItem('keypg', JSON.stringify(arr))
 })
+
+console.log(arr)
+

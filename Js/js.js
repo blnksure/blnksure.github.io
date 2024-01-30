@@ -28,3 +28,47 @@ detect.addEventListener("click", function () {
 })
 
 
+var time = new Date()
+const data = document.querySelector('.data')
+data.innerHTML = time.toLocaleString()
+
+let arr = JSON.parse(localStorage.getItem('keypg')) || []
+const tbody = document.querySelector('tbody')
+function render() {
+    const trArr = arr.map(function (ele, index) {
+        return `
+    <tr>
+      
+      <td><span class="time">${ele.time}</span></td>
+      <td><span class="ago">用户检测记录${index + 2}</span></td>
+      <td><button data-id=${index}>删除</button></td>
+    </tr>
+  `
+    })
+    tbody.innerHTML = trArr.join('')
+}
+
+render()
+
+tbody.addEventListener('click', function (e) {
+    if (e.target.tagName === 'BUTTON') {
+        // alert(11)
+        if (confirm('您确认要删除这条数据吗？')) {
+            arr.splice(e.target.dataset.id, 1)
+            render()
+            localStorage.setItem('keypg', JSON.stringify(arr))
+        }
+
+    }
+})
+
+const thead = document.querySelector('thead')
+thead.addEventListener('click', function (e) {
+    if (e.target.tagName === 'BUTTON') {
+        // alert(11)
+        if (confirm('您确认要删除这条数据吗？')) {
+            thead.innerHTML = ''
+        }
+
+    }
+})

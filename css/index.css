@@ -177,6 +177,11 @@ body {
   color: #5f80f4;
 }
 
+.ban_login {
+
+  transition: all .5s;
+}
+
 .banner .wrapper .form-login .logtive {
   display: block;
 }
@@ -234,4 +239,12 @@ body {
 
 .tab-pane .yes a {
   color: #0673B1;
+}
+
+.close {
+  font-size: 20px;
+  margin-left: 360px;
+
+  color: #e2e2e2;
+  cursor: pointer;
 }

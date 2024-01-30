@@ -4,9 +4,11 @@ const buttons = document.querySelectorAll('.login button')
 const tabs = document.querySelectorAll('.tab-pane')
 const box = document.querySelector('.banner .box')
 const logBox = document.querySelector('.banner .wrapper .box')
+const ban = document.querySelector('.ban_login')
 topanav.addEventListener('click', function (e) {
   // console.log(e.target.tagName);
   if (e.target.tagName === 'BUTTON') {
+    ban.style.opacity = 1
     const i = +e.target.dataset.id
     box.style.opacity = 1
     if (document.querySelector('.box .active')) {
@@ -78,3 +80,12 @@ link.addEventListener('click', function () {
     document.querySelector('.logcode').classList.add('logtive')
   }
 })
+
+const close = document.querySelectorAll('.close')
+for (let i = 0; i < close.length; i++) {
+  close[i].addEventListener('click', function (e) {
+    ban.style.opacity = 0
+  })
+
+}
+
