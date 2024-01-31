@@ -80,11 +80,15 @@ link.addEventListener('click', function () {
     link.innerHTML = '手机验证码登录'
     logPassword.placeholder = '请输入密码'
     logUser.placeholder = '请输入用户名称'
+    logPassword.value = ''
+    logUser.value = ''
     document.querySelector('.logtive').classList.remove('logtive')
   } else {
     link.innerHTML = '密码登录'
     logPassword.placeholder = '请输入验证码'
     logUser.placeholder = '请输入手机号码'
+    logPassword.value = ''
+    logUser.value = ''
     document.querySelector('.logcode').classList.add('logtive')
   }
 })
