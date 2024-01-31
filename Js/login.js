@@ -101,5 +101,3 @@ for (let i = 0; i < close.length; i++) {
 
 }
 
-const pname = document.querySelector('.pusername')
-pname.innerHTML = localStorage.getItem('pg-username')
