@@ -57,3 +57,6 @@ sub.addEventListener('click', function () {
 
 console.log(arr)
 
+const pname = document.querySelector('.pusername')
+pname.innerHTML = localStorage.getItem('pg-username')
+

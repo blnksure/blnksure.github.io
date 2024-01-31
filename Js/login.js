@@ -5,6 +5,7 @@ const tabs = document.querySelectorAll('.tab-pane')
 const box = document.querySelector('.banner .box')
 const logBox = document.querySelector('.banner .wrapper .box')
 const ban = document.querySelector('.ban_login')
+var cango = false
 topanav.addEventListener('click', function (e) {
   // console.log(e.target.tagName);
   if (e.target.tagName === 'BUTTON') {
@@ -16,7 +17,13 @@ topanav.addEventListener('click', function (e) {
     }
     tabs[i].classList.add('active')
   }
+  if (e.target.tagName === 'A' && e.target.dataset.c != 0) {
+    if (!cango) {
+      e.preventDefault()
+      alert('请先登录/注册')
+    }
 
+  }
 })
 
 //登录跳转注册
@@ -37,8 +44,9 @@ logForm.addEventListener('submit', function (e) {
   if (!agree.checked) {
     return alert('请勾选同意框')
   }
-  localStorage.setItem('pri-username', logUsername.value)
-  location.href = './index.html'
+  localStorage.setItem('pg-username', logUsername.value)
+  ban.style.opacity = 0
+  cango = agree.checked
 })
 
 //验证码登录
@@ -89,3 +97,5 @@ for (let i = 0; i < close.length; i++) {
 
 }
 
+const pname = document.querySelector('.pusername')
+pname.innerHTML = localStorage.getItem('pg-username')

@@ -461,3 +461,7 @@ button {
   border: none;
   padding: 0;
 }
+
+.usrrpic span {
+  margin-top: 8px;
+}

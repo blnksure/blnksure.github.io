@@ -72,3 +72,6 @@ thead.addEventListener('click', function (e) {
 
     }
 })
+
+const pname = document.querySelector('.pusername')
+pname.innerHTML = localStorage.getItem('pg-username')

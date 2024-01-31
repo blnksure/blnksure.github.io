@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>层层守护,隐私无忧!</title>
+  <title>Privacy-Guard-层层守护,隐私无忧!</title>
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/help.css">
 </head>
@@ -30,6 +30,7 @@
     <!-- 用户头像 -->
     <div class="usrrpic">
       <div class="u-img"></div>
+      <span class="pusername">藤椒十二</span>
     </div>
   </div>
 
@@ -58,6 +59,10 @@
       <img src="./images/u276.png">
     </div>
   </div>
+  <script>
+    const pname = document.querySelector('.pusername')
+    pname.innerHTML = localStorage.getItem('pg-username')
+  </script>
 </body>
 
 </html>
