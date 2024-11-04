@@ -1,137 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy-Guard-层层守护,隐私无忧!</title>
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录和注册页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #6e9abb;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+        }
+
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 93%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6e9abb;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #5a8991;
+        }
+
+        .toggle-link {
+            color: #6e9abb;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- 顶部导航 -->
-  <div class="pri_topanav">
-    <!-- 网站logo -->
-    <div class="logo">
-      <a href="#">
-        <h1 class="pri_logo"></h1>
-        <h3>Privacy-Guard Online</h3>
-      </a>
-    </div>
-    <!-- 主导航 -->
-    <div class="pri_navs">
-      <ul>
-        <li><a href="./index.html" data-c="0">首页</a></li>
-        <li><a href="./detect.html" data-c="1">检测</a></li>
-        <li><a href="./help.html" data-c="2">帮助</a></li>
-        <li><a href="./personalcenter.html" data-c="3">个人中心</a></li>
-      </ul>
-    </div>
-    <!-- 注册 -->
-    <div class="login">
-      <ul>
-        <button class="button_log" data-id="0">登录</button>
-        <button class="buttom_reg" data-id="1">注册</button>
-      </ul>
-    </div>
-  </div>
 
-  <!-- 主要内容 -->
-  <div class="banner">
-    <div class="wrapper">
-      <img src="./images/bgi.png" alt="">
-      <div class="ban_login">
-        <!-- 登录 -->
-        <form action="login" class="form-login">
-          <div class="box none">
-            <div class="tab-pane">
-              <div class="ban-login">
-                <span class="close" data-no="0">X</span>
-                <div class="header">登 录</div>
-                <div class="input">
-                  <input required type="text" placeholder="请输入用户名称" name="log-username">
-                  <a class="logcode" href="javascript:;">发送验证码</a>
-                </div>
-                <div class="input">
-                  <input required type="password" placeholder="请输入密码" name="log-password">
-                </div>
-                <div class="link">
-                  <a href="javascript:;">手机验证码登录</a>
-                </div>
-                <div class="agree">
-                  <label for="my-checkbox">
-                    <input type="checkbox" value="1" id="my-checkbox" class="remember" name="agree">
-                  </label>
-                  我同意<a href="#">《服务条款》</a>
-
-                  <div class="rememberMe">
-                    <input type="checkbox" id="rememberMe">
-                    记住我
-                  </div>
-                </div>
-                <div class="button clearfix">
-                  <button type="submit" class="dl">登 录</button>
-                  <!-- <a class="dl" href="./center.html">登 录</a> -->
-                  <a class="fr" href="#">免费注册</a>
-                </div>
-              </div>
-            </div>
-        </form>
-
-        <!-- 注册 -->
-        <form action="register" class="form-register">
-          <div class="tab-pane">
-            <div class="ban-reg">
-              <span class="close">X</span>
-              <div class="header">注 册</div>
-              <div data-prop="username" class="form-item">
-                <span>账 &nbsp&nbsp&nbsp&nbsp 号:</span>
-                <input name="username" type="text" placeholder="设置您的账号" class="reall">
-                <span class="msg"></span>
-              </div>
-              <div data-prop="phone" class="form-item">
-                <span>手 机 号:</span>
-                <input name="phone" type="text" placeholder="输入手机号码" class="reall">
-                <span class="msg"></span>
-              </div>
-              <div data-prop="code" class="form-item">
-                <span>验 证 码:</span>
-                <input name="code" type="text" placeholder="短信验证码" class="reall">
-                <span class="msg"></span>
-                <a class="code" href="javascript:;">发送验证码</a>
-              </div>
-              <div data-prop="password" class="form-item">
-                <span>密 &nbsp&nbsp&nbsp&nbsp 码:</span>
-                <input name="password" type="password" placeholder="设置6至20位字母、数字和符号组合" class="reall">
-                <span class="msg"></span>
-              </div>
-              <div data-prop="confirm" class="form-item">
-                <span>确认密码:</span>
-                <input name="confirm" type="password" placeholder="请再次输入上面密码" class="reall">
-                <span class="msg"></span>
-              </div>
-              <label for="2" class="yes">
-                <input type="checkbox">
-                已阅读并同意<a href="#">《用户服务协议》</a>
-              </label>
-
-              <div class="form-item">
-                <button class="submit">注册</button>
-              </div>
-            </div>
-          </div>
-        </form>
-
-      </div>
+    <div class="container" id="loginForm">
+        <h2>登录</h2>
+        <input type="text" placeholder="用户名" required>
+        <input type="password" placeholder="密码" required>
+        <button>登录</button>
+        <p class="toggle-link" onclick="toggleForm()">还没有账号？注册</p>
     </div>
 
-  </div>
-  <script src="./Js/login.js"></script>
-  <script src="./Js/register.js"></script>
-  <script>
+    <div class="container" id="registerForm" style="display: none;">
+        <h2>注册</h2>
+        <input type="text" placeholder="用户名" required>
+        <input type="password" placeholder="密码" required>
+        <input type="password" placeholder="确认密码" required>
+        <button>注册</button>
+        <p class="toggle-link" onclick="toggleForm()">已有账号？登录</p>
+    </div>
 
-  </script>
+    <script>
+        function toggleForm() {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            }
+        }
+    </script>
+
 </body>
 
 </html>
