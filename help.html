@@ -1,68 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy-Guard-层层守护,隐私无忧!</title>
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/help.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录和注册页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #6e9abb;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+        }
+
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 93%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6e9abb;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #5a8991;
+        }
+
+        .toggle-link {
+            color: #6e9abb;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="pri_topanav">
-    <!-- 网站logo -->
-    <div class="logo">
-      <a href="#">
-        <h1 class="pri_logo"></h1>
-        <h3>Privacy-Guard Online</h3>
-      </a>
-    </div>
-    <!-- 主导航 -->
-    <div class="pri_navs">
-      <ul>
-        <li><a href="./index.html">首页</a></li>
-        <li><a href="./detect.html">检测</a></li>
-        <li><a href="#">帮助</a></li>
-        <li><a href="./personalcenter.html">个人中心</a></li>
-      </ul>
-    </div>
-    <!-- 用户头像 -->
-    <div class="usrrpic">
-      <div class="u-img"></div>
-      <span class="pusername">藤椒十二</span>
-    </div>
-  </div>
 
-  <!-- 主要内容 -->
-  <div class="hebanner">
-    <div class="wrapper">
-      <div>
-        <ul>
-          <li>简介合规性：<span>隐私政策文件的说明，包括定义文件中使用的人称代词。</span></li>
-          <li>标题合规性：<span>隐私策略文件的标题中应该明确列示“隐私权政策”字样。</span></li>
-          <li>开发者信息：<span>应用的商品详情中提到的实体（例如开发者、公司），以及隐私权问题联系人或咨询机制等。</span></li>
-          <li>动作和目的：<span>包括但不限于个人信息、设备信息等，清晰地列出数据的使用目的，例如用于提供特定服务、<br>改善用户体验、个性化推荐等。</span></li>
-          <li>处理技术：<span>用户敏感数据的处理流程，以确保数据隐私和安全，例如如何收集和使用cookie及其他类似技<br>术等。</span></li>
-          <li>数据分享：<span>与第三方合作的开发者如何分享和披露信息，包括公司附属公司、服务提供商或广告合作伙伴。</span></li>
-          <li>数据安全：<span>为保护用户信息所采用的安全设施和方法。</span></li>
-          <li>用户权力：<span>例如选择退出数据分享、更正或删除个人数据的权利、对用户隐私和安全的设置等。</span></li>
-          <li>数据保留：<span>开发者的数据保留和删除政策，数据存储和期限的要求。</span></li>
-          <li>国际数据传输：<span>阐述有关国际数据传输的情况，特别是在涉及到跨境数据传输时。</span></li>
-          <li>隐私策略的变化：<span>需要告知用户并保证他们了解隐私策略的变化。</span></li>
-          <li>法律依据：<span>在隐私策略中引用的隐私法规和条例，如《通用数据保护条例》（GDPR）、《加州消费者<br>隐私法》（CCPA）等。</span></li>
-          <li>广告使用：<span>如果应用将个人数据和敏感用户数据用于广告的投放，则必须遵守 广告政策。</span></li>
-          <li>儿童保护：<span>例如在隐私策略中明确定义儿童的年龄范围，对数据访问的条件等。</span></li>
-          <li>链接有效性：<span>确保隐私策略网址的链接是稳定的，不会频繁更改。</span></li>
-        </ul>
-      </div>
-      <img src="./images/u276.png">
+    <div class="container" id="loginForm">
+        <h2>登录</h2>
+        <input type="text" placeholder="用户名" required>
+        <input type="password" placeholder="密码" required>
+        <button>登录</button>
+        <p class="toggle-link" onclick="toggleForm()">还没有账号？注册</p>
     </div>
-  </div>
-  <script>
-    const pname = document.querySelector('.pusername')
-    pname.innerHTML = localStorage.getItem('pg-username')
-  </script>
+
+    <div class="container" id="registerForm" style="display: none;">
+        <h2>注册</h2>
+        <input type="text" placeholder="用户名" required>
+        <input type="password" placeholder="密码" required>
+        <input type="password" placeholder="确认密码" required>
+        <button>注册</button>
+        <p class="toggle-link" onclick="toggleForm()">已有账号？登录</p>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            }
+        }
+    </script>
+
 </body>
 
 </html>
