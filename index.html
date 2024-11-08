@@ -66,9 +66,11 @@
 
     <div class="container" id="loginForm">
         <h2>登录</h2>
-        <input type="text" placeholder="用户名" required>
-        <input type="password" placeholder="密码" required>
-        <button>登录</button>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="用户名" required>
+            <input type="password" id="password" placeholder="密码" required>
+            <button type="submit">登录</button>
+        </form>
         <p class="toggle-link" onclick="toggleForm()">还没有账号？注册</p>
     </div>
 
@@ -94,6 +96,16 @@
                 registerForm.style.display = 'block';
             }
         }
+
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // 这里可以添加验证用户名和密码的逻辑
+            // 假设验证通过，跳转到指定页面
+            window.location.href = 'http://127.0.0.1:7860';
+        });
     </script>
 
 </body>
